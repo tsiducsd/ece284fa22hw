@@ -5,7 +5,6 @@
 
 import itertools
 import csv
-import fire
 
 import torch
 import torch.nn as nn
@@ -294,4 +293,4 @@ def main(task='mrpc',
 
 
 if __name__ == '__main__':
-    fire.Fire(main)
+    main()
