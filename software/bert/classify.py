@@ -15,6 +15,7 @@ import models
 # import model_thres as models
 import optim
 import os 
+import fire
 import train as train
 
 from utils import set_seeds, get_device, truncate_tokens_pair
@@ -233,9 +234,9 @@ class Classifier(nn.Module):
 def main(task='cola',
          train_cfg='config/train_cola.json',
          model_cfg='config/bert_base.json',
-         data_file='./GLUE_DATA/MRPC/dev.tsv',
+         data_file='./GLUE_DATA/COLA/dev.tsv',
          model_file=None, 
-         pretrain_file='../uncased_L-12_H-768_A-12/bert_model.ckpt',
+         pretrain_file='./PRE_TRAINED_MODEL/bert_model.ckpt',
          data_parallel=True,
          vocab='./PRE_TRAINED_MODEL/vocab.txt',
          save_dir='../exp/bert/cola',
@@ -293,4 +294,4 @@ def main(task='cola',
 
 
 if __name__ == '__main__':
-    main()
+    fire.Fire(main)
