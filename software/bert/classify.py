@@ -230,15 +230,15 @@ class Classifier(nn.Module):
 #pretrain_file='../uncased_L-12_H-768_A-12/bert_model.ckpt',
 #pretrain_file='../exp/bert/pretrain_100k/model_epoch_3_steps_9732.pt',
 
-def main(task='mrpc',
-         train_cfg='config/train_mrpc.json',
+def main(task='cola',
+         train_cfg='config/train_cola.json',
          model_cfg='config/bert_base.json',
          data_file='./GLUE_DATA/MRPC/dev.tsv',
          model_file=None, 
          pretrain_file='../uncased_L-12_H-768_A-12/bert_model.ckpt',
          data_parallel=True,
          vocab='./PRE_TRAINED_MODEL/vocab.txt',
-         save_dir='../exp/bert/mrpc',
+         save_dir='../exp/bert/cola',
          max_len=128,
          mode='eval'):
 
